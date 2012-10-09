@@ -1,0 +1,6 @@
+vhdl work Input_process.vhd
+vhdl work voltage_process.vhd
+vhdl work vgacontroller.vhd
+vhdl work vga_memory.vhd
+vhdl work vga_fehmi.vhd
+vhdl work Oscilloscope.vhd

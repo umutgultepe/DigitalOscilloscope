@@ -1,0 +1,1336 @@
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+c:\xilinx\bin\tempos/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+.untf
+oscilloscope.cmd_log
+# Assign Package Pins
+__projnav/parentAssignPackagePinsApp_tcl.rsp
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+c:\xilinx\bin\tempos/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+c:\xilinx\bin\tempos/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+voltage_process.lso
+# xst flow : RunXST
+voltage_process.syr
+voltage_process.prj
+voltage_process.sprj
+voltage_process.ana
+voltage_process.stx
+voltage_process.cmd_log
+voltage_process.ngc
+voltage_process.ngr
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+c:\xilinx\bin\tempos/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# Configure Device (iMPACT)
+oscilloscope.prm
+oscilloscope.isc
+oscilloscope.svf
+xilinx.sys
+oscilloscope.mcs
+oscilloscope.exo
+oscilloscope.hex
+oscilloscope.tek
+oscilloscope.dst
+oscilloscope.dst_compressed
+oscilloscope.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# Configure Device (iMPACT)
+oscilloscope.prm
+oscilloscope.isc
+oscilloscope.svf
+xilinx.sys
+oscilloscope.mcs
+oscilloscope.exo
+oscilloscope.hex
+oscilloscope.tek
+oscilloscope.dst
+oscilloscope.dst_compressed
+oscilloscope.mpm
+_impact.cmd
+_impact.log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# XST (Creating Lso File) : 
+oscilloscope.lso
+# xst flow : RunXST
+oscilloscope.syr
+oscilloscope.prj
+oscilloscope.sprj
+oscilloscope.ana
+oscilloscope.stx
+oscilloscope.cmd_log
+input_process.ngc
+voltage_process.ngc
+oscilloscope.ngc
+input_process.ngr
+voltage_process.ngr
+oscilloscope.ngr
+# Implmentation : Translate
+__projnav/ngdbuild.err
+__projnav/ednTOngd_tcl.rsp
+d:\oscilloscope/_ngo
+oscilloscope.ngd
+oscilloscope_ngdbuild.nav
+oscilloscope.bld
+oscilloscope.ucf.untf
+oscilloscope.cmd_log
+# Implementation : Map
+oscilloscope_map.ncd
+oscilloscope.ngm
+oscilloscope.pcf
+oscilloscope.nc1
+oscilloscope.mrp
+oscilloscope_map.mrp
+oscilloscope.mdf
+__projnav/map.log
+oscilloscope.cmd_log
+MAP_NO_GUIDE_FILE_CPF "oscilloscope"
+# Implmentation : Post-Place & Route Timing
+__projnav/ncdTOtwr_tcl.rsp
+__projnav/posttrc.log
+oscilloscope.twr
+oscilloscope.twx
+oscilloscope.tsi
+oscilloscope.cmd_log
+# Implmentation : Place & Route
+__projnav/nc1TOncd_tcl.rsp
+oscilloscope.ncd
+oscilloscope.par
+oscilloscope.pad
+oscilloscope_pad.txt
+oscilloscope_pad.csv
+oscilloscope.pad_txt
+oscilloscope.dly
+reportgen.log
+oscilloscope.xpi
+oscilloscope.grf
+oscilloscope.itr
+oscilloscope_last_par.ncd
+__projnav/par.log
+oscilloscope.placed_ncd_tracker
+oscilloscope.routed_ncd_tracker
+oscilloscope.cmd_log
+PAR_NO_GUIDE_FILE_CPF "oscilloscope"
+# Generate Programming File
+__projnav/oscilloscope_ncdTOut_tcl.rsp
+__projnav/bitgen.rsp
+bitgen.ut
+oscilloscope.ut
+# Generate Programming File
+oscilloscope.bgn
+oscilloscope.rbt
+oscilloscope.ll
+oscilloscope.msk
+oscilloscope.drc
+oscilloscope.nky
+oscilloscope.bit
+oscilloscope.bin
+oscilloscope.isc
+oscilloscope.cmd_log

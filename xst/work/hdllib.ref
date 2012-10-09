@@ -1,0 +1,12 @@
+AR vgacontroller behavioral D:/Oscilloscope/vgacontroller.vhd sub00/vhpl05
+AR oscilloscope behavioral D:/Oscilloscope/Oscilloscope.vhd sub00/vhpl11
+EN vga_memory NULL D:/Oscilloscope/vga_memory.vhd sub00/vhpl06
+EN voltage_process NULL D:/Oscilloscope/voltage_process.vhd sub00/vhpl02
+EN vgacontroller NULL D:/Oscilloscope/vgacontroller.vhd sub00/vhpl04
+AR vga_memory behavioral D:/Oscilloscope/vga_memory.vhd sub00/vhpl07
+AR voltage_process behavioral D:/Oscilloscope/voltage_process.vhd sub00/vhpl03
+EN vgadrive NULL D:/Oscilloscope/vga_fehmi.vhd sub00/vhpl08
+AR vgadrive behavioral D:/Oscilloscope/vga_fehmi.vhd sub00/vhpl09
+AR input_process behavioral D:/Oscilloscope/Input_process.vhd sub00/vhpl01
+EN oscilloscope NULL D:/Oscilloscope/Oscilloscope.vhd sub00/vhpl10
+EN input_process NULL D:/Oscilloscope/Input_process.vhd sub00/vhpl00

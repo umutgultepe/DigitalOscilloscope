@@ -1,0 +1,5 @@
+xst -intstyle ise -ifn __projnav/input_process.xst -ofn input_process.syr
+xst -intstyle ise -ifn __projnav/input_process.xst -ofn input_process.syr
+xst -intstyle ise -ifn __projnav/input_process.xst -ofn input_process.syr
+xst -intstyle ise -ifn __projnav/input_process.xst -ofn input_process.syr
+xst -intstyle ise -ifn __projnav/input_process.xst -ofn input_process.syr

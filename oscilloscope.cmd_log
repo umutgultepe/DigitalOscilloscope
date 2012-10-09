@@ -1,0 +1,132 @@
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -i  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -i  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -i  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -i  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -i  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -i  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -i  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -i  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd c:\xilinx\bin\tempos/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+xst -intstyle ise -ifn __projnav/oscilloscope.xst -ofn oscilloscope.syr
+ngdbuild -intstyle ise -dd d:\oscilloscope/_ngo -uc oscilloscope.ucf  -p xc2s50-pq208-5 oscilloscope.ngc oscilloscope.ngd
+map -intstyle ise -p xc2s50-pq208-5 -cm area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd oscilloscope.pcf
+par -w -intstyle ise -ol std -t 1 oscilloscope_map.ncd oscilloscope.ncd oscilloscope.pcf
+trce -intstyle ise -e 3 -l 3 -xml oscilloscope oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+bitgen -intstyle ise -f oscilloscope.ut oscilloscope.ncd

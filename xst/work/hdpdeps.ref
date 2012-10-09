@@ -1,0 +1,38 @@
+V1 30
+FL $XILINX/bin/Tempos/vga_fehmi.vhd 2007/12/28.03:27:18
+FL D:/Oscilloscope/voltage_process.vhd 2008/01/04.18:33:54
+EN work/VOLTAGE_PROCESS FL D:/Oscilloscope/voltage_process.vhd \
+      PB ieee/STD_LOGIC_1164 PB ieee/STD_LOGIC_ARITH PB ieee/STD_LOGIC_UNSIGNED
+AR work/VOLTAGE_PROCESS/BEHAVIORAL FL D:/Oscilloscope/voltage_process.vhd \
+      EN work/VOLTAGE_PROCESS
+FL $XILINX/bin/Tempos/vga_fat.vhd 2007/12/27.23:27:18
+FL D:/Oscilloscope/Oscilloscope.vhd 2008/01/04.18:41:34
+EN work/OSCILLOSCOPE    FL D:/Oscilloscope/Oscilloscope.vhd \
+      PB ieee/STD_LOGIC_1164 PB ieee/STD_LOGIC_ARITH PB ieee/STD_LOGIC_UNSIGNED
+AR work/OSCILLOSCOPE/BEHAVIORAL FL D:/Oscilloscope/Oscilloscope.vhd \
+      EN work/OSCILLOSCOPE CP INPUT_PROCESS CP VOLTAGE_PROCESS CP VGADRIVE
+FL $XILINX/bin/Tempos/Oscilloscope.vhd 2007/12/28.03:47:12
+FL D:/Oscilloscope/vga_fehmi.vhd 2007/12/29.00:27:18
+EN work/VGADRIVE        FL D:/Oscilloscope/vga_fehmi.vhd PB ieee/STD_LOGIC_1164 \
+      PB ieee/STD_LOGIC_ARITH PB ieee/STD_LOGIC_UNSIGNED
+AR work/VGADRIVE/BEHAVIORAL FL D:/Oscilloscope/vga_fehmi.vhd EN work/VGADRIVE \
+      CP VGACONTROLLER  CP VGA_MEMORY
+FL D:/Oscilloscope/Input_process.vhd 2008/01/04.18:40:42
+EN work/INPUT_PROCESS   FL D:/Oscilloscope/Input_process.vhd \
+      PB ieee/STD_LOGIC_1164 PB ieee/STD_LOGIC_ARITH PB ieee/STD_LOGIC_UNSIGNED
+AR work/INPUT_PROCESS/BEHAVIORAL FL D:/Oscilloscope/Input_process.vhd \
+      EN work/INPUT_PROCESS
+FL D:/Oscilloscope/vgacontroller.vhd 2007/12/29.00:25:54
+EN work/VGACONTROLLER   FL D:/Oscilloscope/vgacontroller.vhd \
+      PB ieee/STD_LOGIC_1164 PB ieee/STD_LOGIC_ARITH PB ieee/STD_LOGIC_UNSIGNED
+AR work/VGACONTROLLER/BEHAVIORAL FL D:/Oscilloscope/vgacontroller.vhd \
+      EN work/VGACONTROLLER
+FL $XILINX/bin/Tempos/Input_process.vhd 2007/12/28.04:40:24
+FL $XILINX/bin/Tempos/vga_memory.vhd 2007/12/26.21:51:38
+FL $XILINX/bin/Tempos/vgacontroller.vhd 2007/12/28.03:25:55
+FL $XILINX/bin/Tempos/voltage_process.vhd 2007/12/28.05:06:22
+FL D:/Oscilloscope/vga_memory.vhd 2007/12/27.18:51:38
+EN work/VGA_MEMORY      FL D:/Oscilloscope/vga_memory.vhd PB ieee/STD_LOGIC_1164 \
+      PB ieee/STD_LOGIC_ARITH PB ieee/STD_LOGIC_UNSIGNED
+AR work/VGA_MEMORY/BEHAVIORAL FL D:/Oscilloscope/vga_memory.vhd \
+      EN work/VGA_MEMORY

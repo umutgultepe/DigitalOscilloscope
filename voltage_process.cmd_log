@@ -1,0 +1,7 @@
+xst -intstyle ise -ifn __projnav/voltage_process.xst -ofn voltage_process.syr
+xst -intstyle ise -ifn __projnav/voltage_process.xst -ofn voltage_process.syr
+xst -intstyle ise -ifn __projnav/voltage_process.xst -ofn voltage_process.syr
+xst -intstyle ise -ifn __projnav/voltage_process.xst -ofn voltage_process.syr
+xst -intstyle ise -ifn __projnav/voltage_process.xst -ofn voltage_process.syr
+xst -intstyle ise -ifn __projnav/voltage_process.xst -ofn voltage_process.syr
+xst -intstyle ise -ifn __projnav/voltage_process.xst -ofn voltage_process.syr

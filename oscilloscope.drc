@@ -1,0 +1,7 @@
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net monitor_vga1__n0010
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net monitor_vga1__n0013
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+DRC detected 0 errors and 2 warnings.

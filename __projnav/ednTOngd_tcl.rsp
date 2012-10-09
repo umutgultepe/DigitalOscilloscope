@@ -1,0 +1,3 @@
+set ADucfFile {oscilloscope.ucf}
+set AD {}
+set ADcdcFile {}

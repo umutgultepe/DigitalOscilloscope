@@ -1,0 +1,233 @@
+Release 6.3.03i Map G.38
+Xilinx Mapping Report File for Design 'oscilloscope'
+
+Design Information
+------------------
+Command Line   : D:/Xilinx/bin/nt/map.exe -intstyle ise -p xc2s50-pq208-5 -cm
+area -pr b -k 4 -c 100 -tx off -o oscilloscope_map.ncd oscilloscope.ngd
+oscilloscope.pcf 
+Target Device  : x2s50
+Target Package : pq208
+Target Speed   : -5
+Mapper Version : spartan2 -- $Revision: 1.16.8.2 $
+Mapped Date    : Fri Jan 04 18:42:31 2008
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Logic Utilization:
+  Total Number Slice Registers:     114 out of  1,536    7%
+    Number used as Flip Flops:                     95
+    Number used as Latches:                        19
+  Number of 4 input LUTs:           307 out of  1,536   19%
+Logic Distribution:
+    Number of occupied Slices:                         246 out of    768   32%
+    Number of Slices containing only related logic:    246 out of    246  100%
+    Number of Slices containing unrelated logic:         0 out of    246    0%
+        *See NOTES below for an explanation of the effects of unrelated logic
+Total Number 4 input LUTs:          424 out of  1,536   27%
+      Number used as logic:                       307
+      Number used as a route-thru:                117
+   Number of bonded IOBs:            42 out of    140   30%
+      IOB Flip Flops:                              10
+   Number of GCLKs:                   1 out of      4   25%
+   Number of GCLKIOBs:                1 out of      4   25%
+
+Total equivalent gate count for design:  3,821
+Additional JTAG gate count for IOBs:  2,064
+Peak Memory Usage:  59 MB
+
+NOTES:
+
+   Related logic is defined as being logic that shares connectivity -
+   e.g. two LUTs are "related" if they share common inputs.
+   When assembling slices, Map gives priority to combine logic that
+   is related.  Doing so results in the best timing performance.
+
+   Unrelated logic shares no connectivity.  Map will only begin
+   packing unrelated logic into a slice once 99% of the slices are
+   occupied through related logic packing.
+
+   Note that once logic distribution reaches the 99% level through
+   related logic packing, this does not mean the device is completely
+   utilized.  Unrelated logic packing will then begin, continuing until
+   all usable LUTs and FFs are occupied.  Depending on your timing
+   budget, increased levels of unrelated logic packing may adversely
+   affect the overall timing performance of your design.
+
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group Summary
+Section 10 - Modular Design Summary
+Section 11 - Timing Report
+Section 12 - Configuration String Information
+Section 13 - Additional Device Resource Counts
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net monitor_vga1__n0010
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+WARNING:DesignRules:372 - Netcheck: Gated clock. Clock net monitor_vga1__n0013
+   is sourced by a combinatorial pin. This is not good design practice. Use the
+   CE pin to control the loading of data into the flip-flop.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:95 - All of the external outputs in this design are using slew rate
+   limited output drivers. The delay on speed critical outputs can be
+   dramatically reduced by designating them as fast outputs in the schematic.
+INFO:MapLib:562 - No environment variables are currently set.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) optimized away
+
+Section 5 - Removed Logic
+-------------------------
+
+Optimized Block(s):
+TYPE 		BLOCK
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type    | Direction | IO Standard | Drive    | Slew | Reg (s)  | Resistor | IOB   |
+|                                    |         |           |             | Strength | Rate |          |          | Delay |
++------------------------------------------------------------------------------------------------------------------------+
+| clk                                | GCLKIOB | INPUT     | LVTTL       |          |      |          |          |       |
+| blu                                | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| cs                                 | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| grn                                | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| hs                                 | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| intr                               | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| intro                              | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| rd                                 | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| red                                | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tsign                              | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| tsigno                             | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tvalue<0>                          | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| tvalue<1>                          | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| tvalue<2>                          | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| tvalue<3>                          | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| tvalue<4>                          | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| tvalue<5>                          | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| tvalue<6>                          | IOB     | INPUT     | LVTTL       |          |      |          |          |       |
+| tvalueo<0>                         | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tvalueo<1>                         | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tvalueo<2>                         | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tvalueo<3>                         | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tvalueo<4>                         | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tvalueo<5>                         | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| tvalueo<6>                         | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| voltage<0>                         | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| voltage<1>                         | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| voltage<2>                         | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| voltage<3>                         | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| voltage<4>                         | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| voltage<5>                         | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| voltage<6>                         | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| voltage<7>                         | IOB     | INPUT     | LVTTL       |          |      | INFF     |          | IFD   |
+| voltageo<0>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| voltageo<1>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| voltageo<2>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| voltageo<3>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| voltageo<4>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| voltageo<5>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| voltageo<6>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| voltageo<7>                        | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| vs                                 | IOB     | OUTPUT    | LVTTL       | 12       | SLOW |          |          |       |
+| wr                                 | IOB     | OUTPUT    | LVTTL       | 12       | SLOW | OUTFF    |          |       |
++------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group Summary
+------------------------------
+No area groups were found in this design.
+
+Section 10 - Modular Design Summary
+-----------------------------------
+Modular Design not used for this design.
+
+Section 11 - Timing Report
+--------------------------
+This design was not run using timing mode.
+
+Section 12 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 13 - Additional Device Resource Counts
+----------------------------------------------
+Number of JTAG Gates for IOBs = 43
+Number of Equivalent Gates for Design = 3,821
+Number of RPM Macros = 0
+Number of Hard Macros = 0
+PCI IOBs = 0
+PCI LOGICs = 0
+CAPTUREs = 0
+BSCANs = 0
+STARTUPs = 0
+DLLs = 0
+GCLKIOBs = 1
+GCLKs = 1
+Block RAMs = 0
+TBUFs = 0
+Total Registers (Flops & Latches in Slices & IOBs) not driven by LUTs = 112
+IOB Latches not driven by LUTs = 0
+IOB Latches = 0
+IOB Flip Flops not driven by LUTs = 10
+IOB Flip Flops = 10
+Unbonded IOBs = 0
+Bonded IOBs = 42
+Shift Registers = 0
+Static Shift Registers = 0
+Dynamic Shift Registers = 0
+16x1 ROMs = 0
+16x1 RAMs = 0
+32x1 RAMs = 0
+Dual Port RAMs = 0
+MULTANDs = 0
+MUXF5s + MUXF6s = 0
+4 input LUTs used as Route-Thrus = 117
+4 input LUTs = 307
+Slice Latches not driven by LUTs = 19
+Slice Latches = 19
+Slice Flip Flops not driven by LUTs = 83
+Slice Flip Flops = 95
+Slices = 246
+Number of LUT signals with 4 loads = 3
+Number of LUT signals with 3 loads = 9
+Number of LUT signals with 2 loads = 54
+Number of LUT signals with 1 load = 224
+NGM Average fanout of LUT = 1.92
+NGM Maximum fanout of LUT = 32
+NGM Average fanin for LUT = 2.9186
+Number of LUT symbols = 307
+Number of IPAD symbols = 18
+Number of IBUF symbols = 17

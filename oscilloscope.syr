@@ -1,0 +1,1419 @@
+Release 6.3.03i - xst G.38
+Copyright (c) 1995-2004 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to __projnav
+CPU : 0.00 / 1.01 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 1.01 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Reading design: oscilloscope.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+  5) Advanced HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : oscilloscope.prj
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+Verilog Include Directory          : 
+
+---- Target Parameters
+Output File Name                   : oscilloscope
+Output Format                      : NGC
+Target Device                      : xc2s50-5-pq208
+
+---- Source Options
+Top Module Name                    : oscilloscope
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Equivalent register Removal        : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+Global Optimization                : AllClockNets
+RTL Output                         : Yes
+Write Timing Constraints           : NO
+Hierarchy Separator                : _
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : oscilloscope.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+Optimize Instantiated Primitives   : NO
+tristate2logic                     : No
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file D:/Oscilloscope/vgacontroller.vhd in Library work.
+Architecture behavioral of Entity vgacontroller is up to date.
+Compiling vhdl file D:/Oscilloscope/vga_memory.vhd in Library work.
+Architecture behavioral of Entity vga_memory is up to date.
+Compiling vhdl file D:/Oscilloscope/Input_process.vhd in Library work.
+Architecture behavioral of Entity input_process is up to date.
+Compiling vhdl file D:/Oscilloscope/voltage_process.vhd in Library work.
+Architecture behavioral of Entity voltage_process is up to date.
+Compiling vhdl file D:/Oscilloscope/vga_fehmi.vhd in Library work.
+Architecture behavioral of Entity vgadrive is up to date.
+Compiling vhdl file D:/Oscilloscope/Oscilloscope.vhd in Library work.
+Entity <oscilloscope> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <oscilloscope> (Architecture <behavioral>).
+WARNING:Xst:819 - D:/Oscilloscope/Oscilloscope.vhd line 50: The following signals are missing in the process sensitivity list:
+   intr.
+Entity <oscilloscope> analyzed. Unit <oscilloscope> generated.
+
+Analyzing Entity <input_process> (Architecture <behavioral>).
+Entity <input_process> analyzed. Unit <input_process> generated.
+
+Analyzing Entity <voltage_process> (Architecture <behavioral>).
+WARNING:Xst:819 - D:/Oscilloscope/voltage_process.vhd line 32: The following signals are missing in the process sensitivity list:
+   curvalue.
+WARNING:Xst:819 - D:/Oscilloscope/voltage_process.vhd line 39: The following signals are missing in the process sensitivity list:
+   count, tvaluex, curvalint, oldvalint.
+WARNING:Xst:819 - D:/Oscilloscope/voltage_process.vhd line 59: The following signals are missing in the process sensitivity list:
+   count.
+WARNING:Xst:819 - D:/Oscilloscope/voltage_process.vhd line 71: The following signals are missing in the process sensitivity list:
+   tempwave.
+INFO:Xst:1304 - Contents of register <send> in unit <voltage_process> never changes during circuit operation. The register is replaced by logic.
+Entity <voltage_process> analyzed. Unit <voltage_process> generated.
+
+Analyzing Entity <VGAdrive> (Architecture <behavioral>).
+Entity <VGAdrive> analyzed. Unit <VGAdrive> generated.
+
+Analyzing Entity <vgaController> (Architecture <behavioral>).
+Entity <vgaController> analyzed. Unit <vgaController> generated.
+
+Analyzing Entity <vga_memory> (Architecture <behavioral>).
+Entity <vga_memory> analyzed. Unit <vga_memory> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <vga_memory>.
+    Related source file is D:/Oscilloscope/vga_memory.vhd.
+    Found 9-bit adder for signal <$n0096> created at line 23.
+    Found 9-bit adder for signal <$n0097> created at line 23.
+    Found 9-bit adder for signal <$n0098> created at line 23.
+    Found 9-bit adder for signal <$n0099> created at line 23.
+    Found 9-bit adder for signal <$n0100> created at line 23.
+    Found 9-bit adder for signal <$n0101> created at line 23.
+    Found 9-bit adder for signal <$n0102> created at line 23.
+    Found 9-bit adder for signal <$n0103> created at line 23.
+    Found 9-bit adder for signal <$n0104> created at line 23.
+    Found 9-bit adder for signal <$n0105> created at line 23.
+    Found 9-bit adder for signal <$n0106> created at line 23.
+    Found 9-bit adder for signal <$n0107> created at line 23.
+    Found 9-bit adder for signal <$n0108> created at line 23.
+    Found 9-bit adder for signal <$n0109> created at line 23.
+    Found 9-bit adder for signal <$n0110> created at line 23.
+    Found 9-bit adder for signal <$n0111> created at line 23.
+    Found 9-bit adder for signal <$n0112> created at line 23.
+    Found 9-bit adder for signal <$n0113> created at line 23.
+    Found 9-bit adder for signal <$n0114> created at line 23.
+    Found 9-bit adder for signal <$n0115> created at line 23.
+    Found 9-bit adder for signal <$n0116> created at line 23.
+    Found 9-bit adder for signal <$n0117> created at line 23.
+    Found 9-bit adder for signal <$n0118> created at line 23.
+    Found 9-bit adder for signal <$n0119> created at line 23.
+    Found 9-bit adder for signal <$n0120> created at line 23.
+    Found 9-bit adder for signal <$n0121> created at line 23.
+    Found 9-bit adder for signal <$n0122> created at line 23.
+    Found 9-bit adder for signal <$n0123> created at line 23.
+    Found 9-bit adder for signal <$n0124> created at line 23.
+    Found 9-bit adder for signal <$n0125> created at line 23.
+    Found 9-bit adder for signal <$n0126> created at line 23.
+    Found 9-bit adder for signal <$n0127> created at line 23.
+    Found 9-bit comparator equal for signal <$n0130> created at line 23.
+    Found 9-bit comparator equal for signal <$n0133> created at line 23.
+    Found 9-bit comparator equal for signal <$n0136> created at line 23.
+    Found 9-bit comparator equal for signal <$n0139> created at line 23.
+    Found 9-bit comparator equal for signal <$n0142> created at line 23.
+    Found 9-bit comparator equal for signal <$n0145> created at line 23.
+    Found 9-bit comparator equal for signal <$n0148> created at line 23.
+    Found 9-bit comparator equal for signal <$n0151> created at line 23.
+    Found 9-bit comparator equal for signal <$n0154> created at line 23.
+    Found 9-bit comparator equal for signal <$n0157> created at line 23.
+    Found 9-bit comparator equal for signal <$n0160> created at line 23.
+    Found 9-bit comparator equal for signal <$n0163> created at line 23.
+    Found 9-bit comparator equal for signal <$n0166> created at line 23.
+    Found 9-bit comparator equal for signal <$n0169> created at line 23.
+    Found 9-bit comparator equal for signal <$n0172> created at line 23.
+    Found 9-bit comparator equal for signal <$n0175> created at line 23.
+    Found 9-bit comparator equal for signal <$n0178> created at line 23.
+    Found 9-bit comparator equal for signal <$n0181> created at line 23.
+    Found 9-bit comparator equal for signal <$n0184> created at line 23.
+    Found 9-bit comparator equal for signal <$n0187> created at line 23.
+    Found 9-bit comparator equal for signal <$n0190> created at line 23.
+    Found 9-bit comparator equal for signal <$n0193> created at line 23.
+    Found 9-bit comparator equal for signal <$n0196> created at line 23.
+    Found 9-bit comparator equal for signal <$n0199> created at line 23.
+    Found 9-bit comparator equal for signal <$n0202> created at line 23.
+    Found 9-bit comparator equal for signal <$n0205> created at line 23.
+    Found 9-bit comparator equal for signal <$n0208> created at line 23.
+    Found 9-bit comparator equal for signal <$n0211> created at line 23.
+    Found 9-bit comparator equal for signal <$n0214> created at line 23.
+    Found 9-bit comparator equal for signal <$n0217> created at line 23.
+    Found 9-bit comparator equal for signal <$n0220> created at line 23.
+    Found 9-bit comparator equal for signal <$n0223> created at line 23.
+    Found 10-bit comparator greatequal for signal <$n0224> created at line 20.
+    Found 10-bit comparator lessequal for signal <$n0225> created at line 20.
+    Found 9-bit comparator lessequal for signal <$n0229> created at line 19.
+    Found 9-bit comparator greatequal for signal <$n0230> created at line 19.
+    Summary:
+	inferred  32 Adder/Subtracter(s).
+	inferred  36 Comparator(s).
+Unit <vga_memory> synthesized.
+
+
+Synthesizing Unit <vgaController>.
+    Related source file is D:/Oscilloscope/vgacontroller.vhd.
+WARNING:Xst:737 - Found 10-bit latch for signal <x>.
+WARNING:Xst:737 - Found 9-bit latch for signal <y>.
+    Found 10-bit comparator greatequal for signal <$n0009> created at line 52.
+    Found 10-bit comparator less for signal <$n0010> created at line 52.
+    Found 10-bit subtractor for signal <$n0011> created at line 52.
+    Found 10-bit comparator greatequal for signal <$n0012> created at line 53.
+    Found 10-bit comparator less for signal <$n0013> created at line 53.
+    Found 9-bit subtractor for signal <$n0014> created at line 53.
+    Found 1-bit register for signal <clkdiv>.
+    Found 10-bit up counter for signal <hc>.
+    Found 10-bit up counter for signal <vc>.
+    Found 1-bit register for signal <vsenable>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   2 Adder/Subtracter(s).
+	inferred   4 Comparator(s).
+Unit <vgaController> synthesized.
+
+
+Synthesizing Unit <VGAdrive>.
+    Related source file is D:/Oscilloscope/vga_fehmi.vhd.
+Unit <VGAdrive> synthesized.
+
+
+Synthesizing Unit <voltage_process>.
+    Related source file is D:/Oscilloscope/voltage_process.vhd.
+WARNING:Xst:737 - Found 1-bit latch for signal <measure>.
+WARNING:Xst:737 - Found 256-bit latch for signal <tempwave>.
+WARNING:Xst:737 - Found 8-bit latch for signal <count>.
+WARNING:Xst:737 - Found 1-bit latch for signal <send>.
+WARNING:Xst:737 - Found 256-bit latch for signal <waveformer>.
+    Found 8-bit adder for signal <$n0017> created at line 67.
+    Found 8-bit comparator greater for signal <$n0018> created at line 43.
+    Found 8-bit comparator greater for signal <$n0019> created at line 43.
+    Found 8-bit comparator less for signal <$n0020> created at line 51.
+    Found 1 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred   1 Adder/Subtracter(s).
+	inferred   3 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <voltage_process> synthesized.
+
+
+Synthesizing Unit <input_process>.
+    Related source file is D:/Oscilloscope/Input_process.vhd.
+    Found 256-bit register for signal <data>.
+    Found 32-bit up counter for signal <count>.
+    Found 32-bit up counter for signal <countx>.
+    Found 8-bit register for signal <tempval>.
+    Found 1-bit register for signal <tempwr>.
+    Found 256 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred   2 Counter(s).
+	inferred 265 D-type flip-flop(s).
+	inferred 256 Multiplexer(s).
+Unit <input_process> synthesized.
+
+
+Synthesizing Unit <oscilloscope>.
+    Related source file is D:/Oscilloscope/Oscilloscope.vhd.
+WARNING:Xst:653 - Signal <value> is used but never assigned. Tied to value 00000000.
+WARNING:Xst:646 - Signal <waveform> is assigned but never used.
+Unit <oscilloscope> synthesized.
+
+WARNING:Xst:524 - All outputs of the instance <output> of the block <voltage_process> are unconnected in block <oscilloscope>.
+   This instance will be removed from the design along with all underlying logic
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors               : 34
+ 9-bit subtractor                  : 1
+ 10-bit subtractor                 : 1
+ 9-bit adder                       : 32
+# Counters                         : 4
+ 32-bit up counter                 : 2
+ 10-bit up counter                 : 2
+# Registers                        : 5
+ 1-bit register                    : 3
+ 8-bit register                    : 1
+ 256-bit register                  : 1
+# Latches                          : 2
+ 9-bit latch                       : 1
+ 10-bit latch                      : 1
+# Comparators                      : 40
+ 10-bit comparator less            : 2
+ 10-bit comparator greatequal      : 3
+ 9-bit comparator greatequal       : 1
+ 9-bit comparator lessequal        : 1
+ 10-bit comparator lessequal       : 1
+ 9-bit comparator equal            : 32
+# Multiplexers                     : 1
+ 256-bit 2-to-1 multiplexer        : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch  <data_102> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_101> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_100> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_99> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_98> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_97> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_96> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_95> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_94> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_93> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_92> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_91> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_90> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_89> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_88> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_87> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_86> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_85> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_84> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_83> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_82> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_81> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_80> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_79> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_78> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_77> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_76> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_75> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_74> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_73> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_133> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_132> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_131> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_130> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_129> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_128> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_127> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_126> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_125> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_124> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_123> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_122> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_121> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_120> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_119> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_118> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_117> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_116> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_115> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_114> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_113> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_112> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_111> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_110> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_109> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_108> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_107> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_106> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_105> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_104> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_103> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_41> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_40> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_39> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_38> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_37> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_36> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_35> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_34> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_33> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_32> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_31> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_30> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_29> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_26> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_25> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_24> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_23> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_22> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_21> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_19> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_18> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_17> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_16> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_15> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_14> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_13> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_12> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_11> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_10> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_9> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_72> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_71> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_70> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_69> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_68> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_67> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_66> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_65> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_64> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_63> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_62> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_61> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_60> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_59> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_58> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_57> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_56> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_55> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_54> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_53> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_52> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_51> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_50> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_49> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_48> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_47> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_46> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_45> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_44> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_43> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_42> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_224> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_223> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_222> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_221> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_220> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_219> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_218> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_217> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_216> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_215> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_214> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_213> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_212> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_211> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_210> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_209> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_208> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_207> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_206> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_205> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_204> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_203> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_202> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_201> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_200> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_199> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_198> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_197> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_196> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_195> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_255> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_254> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_253> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_252> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_251> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_250> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_249> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_248> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_247> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_246> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_245> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_244> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_243> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_242> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_241> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_240> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_239> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_238> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_237> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_236> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_235> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_234> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_233> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_232> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_231> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_230> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_229> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_228> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_227> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_226> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_225> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_163> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_162> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_161> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_160> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_159> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_158> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_157> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_156> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_155> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_154> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_153> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_152> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_151> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_150> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_149> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_148> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_147> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_146> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_145> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_144> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_143> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_142> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_141> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_140> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_139> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_138> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_137> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_136> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_135> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_134> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_194> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_193> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_192> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_191> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_190> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_189> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_188> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_187> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_186> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_185> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_184> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_183> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_182> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_181> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_180> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_179> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_178> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_177> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_176> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_175> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_174> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_173> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_172> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_171> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_170> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_169> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_168> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_167> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_166> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_165> (without init value) is constant in block <input_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <data_164> (without init value) is constant in block <input_process>.
+WARNING:Xst:1426 - The value init of the FF/Latch send hinder the constant cleaning in the block voltage_process.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch  <measure> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_0> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_7> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_6> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_5> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_4> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_3> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_1> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_2> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_13> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_12> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_11> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_10> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_9> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_8> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_7> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_6> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_5> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_4> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_3> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_2> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_1> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_0> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_14> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_15> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_16> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_21> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_22> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_23> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_17> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_18> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_19> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_20> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_8> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_9> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_10> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_11> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_12> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_13> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_14> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_15> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_16> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_17> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_18> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_19> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_20> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_21> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_22> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_23> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_24> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_25> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_26> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_27> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_28> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_29> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_30> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_31> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_32> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_33> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_34> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_35> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_36> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_37> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_38> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_39> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_31> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_30> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_29> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_28> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_27> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_26> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_25> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_24> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_37> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_36> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_35> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_34> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_33> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_32> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_40> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_41> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_42> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_43> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_44> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_45> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_46> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_47> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_38> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_39> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_53> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_40> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_41> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_48> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_49> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_50> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_51> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_52> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_42> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_54> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_55> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_43> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_44> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_45> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_46> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_47> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_63> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_62> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_61> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_60> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_59> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_58> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_57> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_56> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_55> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_54> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_53> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_52> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_51> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_50> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_49> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_48> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_64> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_65> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_71> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_70> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_69> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_68> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_67> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_66> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_60> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_61> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_62> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_56> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_57> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_58> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_59> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_63> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_64> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_65> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_72> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_73> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_74> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_75> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_76> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_77> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_78> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_79> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_66> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_67> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_68> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_69> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_70> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_71> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_85> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_86> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_87> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_84> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_83> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_82> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_81> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_72> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_73> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_74> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_75> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_76> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_77> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_78> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_79> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_80> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_89> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_88> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_90> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_91> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_92> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_93> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_94> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_95> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_87> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_86> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_85> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_84> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_83> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_82> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_81> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_80> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_96> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_97> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_98> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_99> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_100> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_101> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_102> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_103> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_95> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_94> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_93> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_92> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_91> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_90> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_89> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_88> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_103> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_111> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_110> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_109> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_108> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_107> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_106> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_105> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_104> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_102> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_101> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_100> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_99> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_98> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_97> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_96> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_119> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_118> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_117> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_116> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_115> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_114> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_113> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_112> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_111> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_110> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_109> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_108> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_104> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_105> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_106> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_107> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_119> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_127> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_126> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_125> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_124> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_123> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_122> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_121> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_120> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_118> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_117> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_116> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_115> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_114> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_113> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_112> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_124> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_127> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_126> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_125> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_123> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_122> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_121> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_120> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_128> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_129> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_130> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_131> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_132> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_133> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_134> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_135> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_136> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_143> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_142> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_141> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_140> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_139> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_138> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_128> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_129> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_130> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_131> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_132> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_133> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_134> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_135> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_137> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_148> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_147> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_146> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_145> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_136> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_137> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_138> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_139> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_140> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_141> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_142> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_143> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_144> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_149> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_150> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_151> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_151> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_150> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_149> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_148> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_147> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_146> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_145> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_144> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_159> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_158> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_157> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_156> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_155> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_154> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_153> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_152> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_160> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_152> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_153> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_154> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_155> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_156> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_162> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_163> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_164> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_165> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_166> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_167> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_161> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_157> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_158> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_159> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_160> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_161> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_162> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_168> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_169> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_170> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_171> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_172> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_173> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_174> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_175> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_163> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_167> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_166> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_165> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_164> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_180> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_179> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_178> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_177> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_168> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_169> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_170> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_171> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_172> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_173> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_174> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_175> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_176> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_181> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_182> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_183> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_183> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_182> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_181> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_180> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_179> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_178> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_177> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_176> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_191> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_190> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_189> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_188> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_187> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_186> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_185> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_184> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_192> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_184> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_185> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_186> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_187> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_188> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_194> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_195> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_196> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_197> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_198> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_199> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_193> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_189> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_190> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_191> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_192> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_193> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_194> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_200> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_201> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_202> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_203> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_204> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_205> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_206> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_207> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_195> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_199> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_198> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_197> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_196> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_212> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_211> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_210> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_209> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_200> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_201> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_202> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_203> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_204> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_205> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_206> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_207> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_213> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_214> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_215> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_208> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_216> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_217> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_218> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_219> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_220> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_221> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_222> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_223> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_208> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_209> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_210> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_211> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_212> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_213> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_214> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_215> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_228> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_227> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_226> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_225> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_216> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_217> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_218> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_219> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_220> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_221> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_222> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_223> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_229> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_230> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_231> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_224> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_232> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_233> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_234> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_235> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_236> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_237> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_238> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_239> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_224> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_225> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_226> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_227> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_228> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_229> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_230> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_231> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_245> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_246> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_247> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_240> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_239> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_238> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_237> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_236> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_235> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_234> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_233> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_232> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_241> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_242> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_243> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_244> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_254> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_255> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_248> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_249> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_247> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_246> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_245> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_244> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_243> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_242> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_241> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_240> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_250> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_251> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_253> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <tempwave_252> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_252> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_251> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_250> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_249> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_248> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_254> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_255> is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <waveformer_253> is constant in block <voltage_process>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <send> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_5> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_2> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_4> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_7> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_6> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_0> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_3> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_1> is unconnected in block <voltage_process>.
+
+Optimizing unit <oscilloscope> ...
+
+Optimizing unit <vga_memory> ...
+
+Optimizing unit <input_process> ...
+WARNING:Xst:1426 - The value init of the FF/Latch data_8 hinder the constant cleaning in the block input_process.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch data_20 hinder the constant cleaning in the block input_process.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch data_27 hinder the constant cleaning in the block input_process.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1426 - The value init of the FF/Latch data_28 hinder the constant cleaning in the block input_process.
+   You should achieve better results by setting this init to 1.
+
+Optimizing unit <voltage_process> ...
+
+Optimizing unit <vgaController> ...
+Loading device for application Xst from file 'v50.nph' in environment D:/Xilinx.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Register measure_data_28 equivalent to measure_data_20 has been removed
+Register measure_data_20 equivalent to measure_data_27 has been removed
+Register measure_data_8 equivalent to measure_data_27 has been removed
+Found area constraint ratio of 100 (+ 5) on block oscilloscope, actual ratio is 34.
+FlipFlop measure_tempwr has been replicated 1 time(s) to handle iob=true attribute.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : oscilloscope.ngr
+Top Level Output File Name         : oscilloscope
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 43
+
+Macro Statistics :
+# Registers                        : 9
+#      1-bit register              : 3
+#      10-bit register             : 4
+#      256-bit register            : 1
+#      8-bit register              : 1
+# Multiplexers                     : 1
+#      2-to-1 multiplexer          : 1
+# Adders/Subtractors               : 38
+#      10-bit adder                : 4
+#      10-bit subtractor           : 1
+#      9-bit adder                 : 32
+#      9-bit subtractor            : 1
+# Comparators                      : 40
+#      10-bit comparator greatequal: 3
+#      10-bit comparator less      : 2
+#      10-bit comparator lessequal : 1
+#      9-bit comparator equal      : 32
+#      9-bit comparator greatequal : 1
+#      9-bit comparator lessequal  : 1
+
+Cell Usage :
+# BELS                             : 775
+#      GND                         : 1
+#      LUT1                        : 130
+#      LUT2                        : 14
+#      LUT3                        : 26
+#      LUT3_L                      : 1
+#      LUT4                        : 248
+#      LUT4_D                      : 4
+#      LUT4_L                      : 2
+#      MUXCY                       : 253
+#      VCC                         : 1
+#      XORCY                       : 95
+# FlipFlops/Latches                : 124
+#      FD                          : 9
+#      FDE                         : 10
+#      FDR                         : 12
+#      FDRE                        : 74
+#      LDE                         : 19
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 42
+#      IBUF                        : 17
+#      OBUF                        : 25
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2s50pq208-5 
+
+ Number of Slices:                     246  out of    768    32%  
+ Number of Slice Flip Flops:           124  out of   1536     8%  
+ Number of 4 input LUTs:               425  out of   1536    27%  
+ Number of bonded IOBs:                 42  out of    144    29%  
+ Number of GCLKs:                        1  out of      4    25%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+monitor_vga1_clkdiv:Q              | NONE                   | 21    |
+monitor_vga1__n0010(monitor_vga1__n001011:O)| NONE(*)(monitor_vga1_x_6)| 10    |
+monitor_vga1__n0013(monitor_vga1__n00132:O)| NONE(*)(monitor_vga1_y_1)| 9     |
+clk                                | BUFGP                  | 84    |
+-----------------------------------+------------------------+-------+
+(*) These 2 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 12.860ns (Maximum Frequency: 77.760MHz)
+   Minimum input arrival time before clock: 12.712ns
+   Maximum output required time after clock: 26.455ns
+   Maximum combinational path delay: 9.281ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+-------------------------------------------------------------------------
+Timing constraint: Default period analysis for Clock 'monitor_vga1_clkdiv:Q'
+Delay:               8.771ns (Levels of Logic = 2)
+  Source:            monitor_vga1_hc_9 (FF)
+  Destination:       monitor_vga1_hc_8 (FF)
+  Source Clock:      monitor_vga1_clkdiv:Q rising
+  Destination Clock: monitor_vga1_clkdiv:Q rising
+
+  Data Path: monitor_vga1_hc_9 to monitor_vga1_hc_8
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              6   1.292   1.850  monitor_vga1_hc_9 (monitor_vga1_hc_9)
+     LUT4:I0->O            2   0.653   1.340  monitor_vga1_SF2161134_SW0 (N27782)
+     LUT4:I2->O           10   0.653   2.200  monitor_vga1_SF2161134 (monitor_vga1_SF21611)
+     FDR:R                     0.783          monitor_vga1_hc_8
+    ----------------------------------------
+    Total                      8.771ns (3.381ns logic, 5.390ns route)
+                                       (38.5% logic, 61.5% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default period analysis for Clock 'clk'
+Delay:               12.860ns (Levels of Logic = 4)
+  Source:            measure_count_19 (FF)
+  Destination:       measure_tempwr (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: measure_count_19 to measure_tempwr
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             2   1.292   1.340  measure_count_19 (measure_count_19)
+     LUT4:I0->O            1   0.653   1.150  measure_Ker21455114 (CHOICE546)
+     LUT3:I1->O            2   0.653   1.340  measure_Ker21455191_SW1 (N27786)
+     LUT4:I3->O           17   0.653   2.900  measure_Ker21455191 (measure_N21457)
+     LUT2:I0->O            2   0.653   1.340  measure__n00241 (measure__n0024)
+     FDE:CE                    0.886          measure_tempwr
+    ----------------------------------------
+    Total                     12.860ns (4.790ns logic, 8.070ns route)
+                                       (37.2% logic, 62.8% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+Offset:              12.712ns (Levels of Logic = 5)
+  Source:            intr (PAD)
+  Destination:       measure_tempwr (FF)
+  Destination Clock: clk rising
+
+  Data Path: intr to measure_tempwr
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   0.924   2.800  intr_IBUF (intro_OBUF)
+     LUT4:I3->O            1   0.653   1.150  measure_Ker21455153 (CHOICE562)
+     LUT4_D:I3->LO         1   0.653   0.100  measure_Ker21455191_SW0 (N27861)
+     LUT4:I0->O           17   0.653   2.900  measure_Ker21455191 (measure_N21457)
+     LUT2:I0->O            2   0.653   1.340  measure__n00241 (measure__n0024)
+     FDE:CE                    0.886          measure_tempwr
+    ----------------------------------------
+    Total                     12.712ns (4.422ns logic, 8.290ns route)
+                                       (34.8% logic, 65.2% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'monitor_vga1_clkdiv:Q'
+Offset:              14.108ns (Levels of Logic = 4)
+  Source:            monitor_vga1_vc_8 (FF)
+  Destination:       vs (PAD)
+  Source Clock:      monitor_vga1_clkdiv:Q rising
+
+  Data Path: monitor_vga1_vc_8 to vs
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   1.292   1.850  monitor_vga1_vc_8 (monitor_vga1_vc_8)
+     LUT3:I2->O            1   0.653   1.150  monitor_vga1__n001625 (CHOICE252)
+     LUT4:I1->O            1   0.653   1.150  monitor_vga1__n001633_SW0 (N27811)
+     LUT4:I3->O            1   0.653   1.150  monitor_vga1__n001633 (vs_OBUF)
+     OBUF:I->O                 5.557          vs_OBUF (vs)
+    ----------------------------------------
+    Total                     14.108ns (8.808ns logic, 5.300ns route)
+                                       (62.4% logic, 37.6% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+Offset:              24.467ns (Levels of Logic = 12)
+  Source:            measure_data_6 (FF)
+  Destination:       grn (PAD)
+  Source Clock:      clk rising
+
+  Data Path: measure_data_6 to grn
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               2   1.292   1.340  measure_data_6 (measure_data_6)
+     LUT2:I0->O            3   0.653   1.480  monitor_vgamemory_vga_memory__n0127<1>cy11 (monitor_vgamemory_vga_memory__n0127<1>_cyo)
+     LUT4:I3->O            4   0.653   1.600  monitor_vgamemory_vga_memory__n0127<4>cy11 (monitor_vgamemory_vga_memory__n0127<4>_cyo)
+     LUT2:I1->O            1   0.653   1.150  monitor_vgamemory_vga_memory__n0127<5>_xor11 (monitor_vgamemory__n0127<5>)
+     LUT4:I3->O            1   0.653   0.000  monitor_vgamemory_Eq_stagelut157 (monitor_vgamemory_N14507)
+     MUXCY:S->O            1   0.784   0.000  monitor_vgamemory_Eq_stagecy_rn_156 (monitor_vgamemory_Eq_stage_cyo126)
+     MUXCY:CI->O           1   0.050   0.000  monitor_vgamemory_Eq_stagecy_rn_157 (monitor_vgamemory_Eq_stage_cyo127)
+     MUXCY:CI->O           2   0.050   1.340  monitor_vgamemory_Eq_stagecy_rn_158 (monitor_vgamemory__n0223)
+     LUT4:I0->O            1   0.653   1.150  monitor_vgamemory_grn73 (CHOICE297)
+     LUT2:I1->O            1   0.653   1.150  monitor_vgamemory_grn75 (CHOICE298)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_grn96_SW0 (N27807)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_grn96 (grn_OBUF)
+     OBUF:I->O                 5.557          grn_OBUF (grn)
+    ----------------------------------------
+    Total                     24.467ns (12.957ns logic, 11.510ns route)
+                                       (53.0% logic, 47.0% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'monitor_vga1__n001011:O'
+Offset:              26.455ns (Levels of Logic = 10)
+  Source:            monitor_vga1_x_2 (LATCH)
+  Destination:       red (PAD)
+  Source Clock:      monitor_vga1__n001011:O falling
+
+  Data Path: monitor_vga1_x_2 to red
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q             21   1.421   3.250  monitor_vga1_x_2 (monitor_vga1_x_2)
+     LUT3:I2->O            1   0.653   1.150  monitor_vgamemory_red127 (CHOICE346)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red170_SW0_SW0 (N27843)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red170_SW0 (N27815)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red170 (CHOICE357)
+     LUT4:I2->O            1   0.653   1.150  monitor_vgamemory_red231 (CHOICE366)
+     LUT4:I1->O            1   0.653   1.150  monitor_vgamemory_red418 (CHOICE405)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red432 (CHOICE406)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red456_SW0 (N27803)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red456 (red_OBUF)
+     OBUF:I->O                 5.557          red_OBUF (red)
+    ----------------------------------------
+    Total                     26.455ns (12.855ns logic, 13.600ns route)
+                                       (48.6% logic, 51.4% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default OFFSET OUT AFTER for Clock 'monitor_vga1__n00132:O'
+Offset:              25.352ns (Levels of Logic = 9)
+  Source:            monitor_vga1_y_2 (LATCH)
+  Destination:       red (PAD)
+  Source Clock:      monitor_vga1__n00132:O falling
+
+  Data Path: monitor_vga1_y_2 to red
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LDE:G->Q             35   1.421   3.950  monitor_vga1_y_2 (monitor_vga1_y_2)
+     LUT4:I1->O            1   0.653   1.150  monitor_vgamemory_red333_SW0 (N27827)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red333 (CHOICE390)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red380_SW0 (N27819)
+     LUT4:I0->O            1   0.653   1.150  monitor_vgamemory_red380 (CHOICE400)
+     LUT4:I2->O            1   0.653   1.150  monitor_vgamemory_red418 (CHOICE405)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red432 (CHOICE406)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red456_SW0 (N27803)
+     LUT4:I3->O            1   0.653   1.150  monitor_vgamemory_red456 (red_OBUF)
+     OBUF:I->O                 5.557          red_OBUF (red)
+    ----------------------------------------
+    Total                     25.352ns (12.202ns logic, 13.150ns route)
+                                       (48.1% logic, 51.9% route)
+
+-------------------------------------------------------------------------
+Timing constraint: Default path analysis
+Delay:               9.281ns (Levels of Logic = 2)
+  Source:            intr (PAD)
+  Destination:       intro (PAD)
+
+  Data Path: intr to intro
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            16   0.924   2.800  intr_IBUF (intro_OBUF)
+     OBUF:I->O                 5.557          intro_OBUF (intro)
+    ----------------------------------------
+    Total                      9.281ns (6.481ns logic, 2.800ns route)
+                                       (69.8% logic, 30.2% route)
+
+=========================================================================
+CPU : 43.44 / 45.28 s | Elapsed : 43.00 / 45.00 s
+ 
+--> 
+
+Total memory usage is 70980 kilobytes
+
+

@@ -1,0 +1,511 @@
+Release 6.3.03i - xst G.38
+Copyright (c) 1995-2004 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to __projnav
+CPU : 0.00 / 0.42 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.42 s | Elapsed : 0.00 / 1.00 s
+ 
+--> Reading design: voltage_process.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) HDL Analysis
+  4) HDL Synthesis
+  5) Advanced HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Final Report
+     7.1) Device utilization summary
+     7.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : voltage_process.prj
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+Verilog Include Directory          : 
+
+---- Target Parameters
+Output File Name                   : voltage_process
+Output Format                      : NGC
+Target Device                      : xc2s50-5-pq208
+
+---- Source Options
+Top Module Name                    : voltage_process
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : lut
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100
+Add Generic Clock Buffer(BUFG)     : 4
+Register Duplication               : YES
+Equivalent register Removal        : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+Global Optimization                : AllClockNets
+RTL Output                         : Yes
+Write Timing Constraints           : NO
+Hierarchy Separator                : _
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : voltage_process.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+Optimize Instantiated Primitives   : NO
+tristate2logic                     : No
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file C:/Xilinx/bin/Tempos/voltage_process.vhd in Library work.
+Architecture behavioral of Entity voltage_process is up to date.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <voltage_process> (Architecture <behavioral>).
+WARNING:Xst:819 - C:/Xilinx/bin/Tempos/voltage_process.vhd line 32: The following signals are missing in the process sensitivity list:
+   curvalue.
+WARNING:Xst:819 - C:/Xilinx/bin/Tempos/voltage_process.vhd line 39: The following signals are missing in the process sensitivity list:
+   count, tvaluex, curvalint, oldvalint.
+WARNING:Xst:819 - C:/Xilinx/bin/Tempos/voltage_process.vhd line 59: The following signals are missing in the process sensitivity list:
+   count.
+WARNING:Xst:819 - C:/Xilinx/bin/Tempos/voltage_process.vhd line 73: The following signals are missing in the process sensitivity list:
+   tempwave.
+INFO:Xst:1304 - Contents of register <send> in unit <voltage_process> never changes during circuit operation. The register is replaced by logic.
+Entity <voltage_process> analyzed. Unit <voltage_process> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <voltage_process>.
+    Related source file is C:/Xilinx/bin/Tempos/voltage_process.vhd.
+WARNING:Xst:737 - Found 1-bit latch for signal <measure>.
+WARNING:Xst:737 - Found 8-bit latch for signal <count>.
+WARNING:Xst:737 - Found 1-bit latch for signal <send>.
+WARNING:Xst:737 - Found 256-bit latch for signal <waveform>.
+    Found 8-bit adder for signal <$n0017> created at line 67.
+    Found 8-bit comparator greater for signal <$n0018> created at line 43.
+    Found 8-bit comparator greater for signal <$n0019> created at line 43.
+    Found 8-bit comparator less for signal <$n0020> created at line 51.
+    Found 1 1-bit 2-to-1 multiplexers.
+    Summary:
+	inferred   1 Adder/Subtracter(s).
+	inferred   3 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <voltage_process> synthesized.
+
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Advanced RAM inference ...
+Advanced multiplier inference ...
+Advanced Registered AddSub inference ...
+Dynamic shift register inference ...
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors               : 1
+ 8-bit adder                       : 1
+# Latches                          : 4
+ 1-bit latch                       : 2
+ 256-bit latch                     : 1
+ 8-bit latch                       : 1
+# Comparators                      : 3
+ 8-bit comparator less             : 1
+ 8-bit comparator greater          : 2
+# Multiplexers                     : 1
+ 1-bit 2-to-1 multiplexer          : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1426 - The value init of the FF/Latch send hinder the constant cleaning in the block voltage_process.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch  <waveform_157> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_158> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_159> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_160> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_161> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_162> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_163> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_164> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_165> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_166> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_167> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_168> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_169> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_170> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_171> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_172> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_173> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_174> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_175> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_176> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_177> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_178> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_179> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_180> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_181> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_182> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_183> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_184> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_185> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_186> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_187> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_188> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_125> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_126> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_127> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_128> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_129> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_130> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_131> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_132> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_133> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_134> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_135> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_136> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_137> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_138> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_139> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_140> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_141> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_142> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_143> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_144> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_145> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_146> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_147> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_148> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_149> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_150> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_151> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_152> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_153> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_154> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_155> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_156> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_221> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_222> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_223> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_224> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_225> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_226> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_227> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_228> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_229> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_230> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_231> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_232> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_233> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_234> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_235> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_236> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_237> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_238> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_239> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_240> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_241> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_242> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_243> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_244> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_245> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_246> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_247> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_248> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_249> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_250> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_251> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_252> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_189> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_190> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_191> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_192> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_193> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_194> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_195> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_196> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_197> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_198> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_199> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_200> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_201> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_202> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_203> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_204> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_205> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_206> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_207> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_208> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_209> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_210> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_211> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_212> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_213> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_214> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_215> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_216> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_217> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_218> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_219> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_220> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_35> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_36> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_37> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_38> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_39> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_40> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_41> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_42> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_43> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_44> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_45> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_46> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_47> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_48> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_49> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_50> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_51> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_52> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_53> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_54> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_55> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_56> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_57> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_58> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_59> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_60> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_61> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_62> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_63> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_64> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_253> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_255> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_254> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_8> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_9> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_10> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_11> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_12> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_13> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_14> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_15> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_16> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_17> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_18> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_19> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_20> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_21> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_22> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_23> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_24> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_25> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_26> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_27> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_28> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_29> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_30> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_31> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_32> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_33> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_34> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_95> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_96> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_97> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_98> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_99> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_100> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_101> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_102> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_103> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_104> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_105> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_106> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_107> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_108> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_109> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_110> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_111> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_112> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_113> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_114> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_115> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_116> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_117> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_118> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_119> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_120> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_121> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_122> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_123> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_124> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_65> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_66> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_67> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_68> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_69> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_70> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_71> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_72> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_73> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_74> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_75> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_76> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_77> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_78> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_79> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_92> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_93> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_94> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_91> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_90> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_89> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_88> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_87> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_86> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_85> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_84> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_83> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_82> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_81> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1710 - FF/Latch  <waveform_80> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <measure> is constant in block <voltage_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <waveform_0> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <waveform_1> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <waveform_2> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <waveform_3> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <waveform_4> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <waveform_5> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <waveform_6> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <waveform_7> (without init value) is constant in block <voltage_process>.
+WARNING:Xst:1898 - Due to constant pushing, FF/Latch <send> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_4> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_3> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_2> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_1> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_0> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_6> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_5> is unconnected in block <voltage_process>.
+WARNING:Xst:1291 - FF/Latch <count_7> is unconnected in block <voltage_process>.
+
+Optimizing unit <voltage_process> ...
+Loading device for application Xst from file 'v50.nph' in environment C:/Xilinx.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block voltage_process, actual ratio is 0.
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : voltage_process.ngr
+Top Level Output File Name         : voltage_process
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 272
+
+Macro Statistics :
+# Multiplexers                     : 1
+#      2-to-1 multiplexer          : 1
+# Adders/Subtractors               : 1
+#      8-bit adder                 : 1
+# Comparators                      : 3
+#      8-bit comparator greater    : 2
+#      8-bit comparator less       : 1
+
+Cell Usage :
+# BELS                             : 1
+#      GND                         : 1
+# IO Buffers                       : 256
+#      OBUF                        : 256
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 2s50pq208-5 
+
+ Number of bonded IOBs:                256  out of    144   177% (*) 
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+CPU : 5.53 / 6.39 s | Elapsed : 6.00 / 7.00 s
+ 
+--> 
+
+Total memory usage is 59624 kilobytes
+
+

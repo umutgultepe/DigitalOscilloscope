@@ -1,0 +1,89 @@
+--------------------------------------------------------------------------------
+Release 6.3.03i Trace G.38
+Copyright (c) 1995-2004 Xilinx, Inc.  All rights reserved.
+
+D:/Xilinx/bin/nt/trce.exe -intstyle ise -e 3 -l 3 -xml oscilloscope
+oscilloscope.ncd -o oscilloscope.twr oscilloscope.pcf
+
+
+Design file:              oscilloscope.ncd
+Physical constraint file: oscilloscope.pcf
+Device,speed:             xc2s50,-5 (PRODUCTION 1.27 2004-06-25)
+Report level:             error report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths
+   option. All paths that are not constrained will be reported in the
+   unconstrained paths section(s) of the report.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |  Setup to  |  Hold to   |                  |  Clock |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) |  Phase |
+------------+------------+------------+------------------+--------+
+intr        |   10.966(R)|    0.078(R)|clk_BUFGP         |   0.000|
+voltage<0>  |    2.271(R)|   -0.070(R)|clk_BUFGP         |   0.000|
+voltage<1>  |    2.271(R)|   -0.015(R)|clk_BUFGP         |   0.000|
+voltage<2>  |    2.287(R)|   -0.238(R)|clk_BUFGP         |   0.000|
+voltage<3>  |    2.287(R)|   -0.032(R)|clk_BUFGP         |   0.000|
+voltage<4>  |    2.288(R)|   -0.574(R)|clk_BUFGP         |   0.000|
+voltage<5>  |    2.338(R)|   -0.056(R)|clk_BUFGP         |   0.000|
+voltage<6>  |    2.339(R)|   -0.467(R)|clk_BUFGP         |   0.000|
+voltage<7>  |    2.288(R)|   -0.615(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  |  Clock |
+Destination | to PAD     |Internal Clock(s) |  Phase |
+------------+------------+------------------+--------+
+grn         |   24.826(R)|clk_BUFGP         |   0.000|
+red         |   25.182(R)|clk_BUFGP         |   0.000|
+wr          |    7.614(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   12.682|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+intr           |intro          |    7.849|
+tsign          |tsigno         |    7.998|
+tvalue<0>      |tvalueo<0>     |    7.744|
+tvalue<1>      |tvalueo<1>     |    7.897|
+tvalue<2>      |tvalueo<2>     |    7.995|
+tvalue<3>      |tvalueo<3>     |    8.079|
+tvalue<4>      |tvalueo<4>     |    7.973|
+tvalue<5>      |tvalueo<5>     |    7.983|
+tvalue<6>      |tvalueo<6>     |    7.590|
+voltage<0>     |voltageo<0>    |    8.536|
+voltage<1>     |voltageo<1>    |    8.344|
+voltage<2>     |voltageo<2>    |    7.989|
+voltage<3>     |voltageo<3>    |    9.012|
+voltage<4>     |voltageo<4>    |    7.947|
+voltage<5>     |voltageo<5>    |    8.124|
+voltage<6>     |voltageo<6>    |    7.587|
+voltage<7>     |voltageo<7>    |    7.662|
+---------------+---------------+---------+
+
+Analysis completed Fri Jan 04 18:42:51 2008
+--------------------------------------------------------------------------------
+
+Peak Memory Usage: 43 MB
